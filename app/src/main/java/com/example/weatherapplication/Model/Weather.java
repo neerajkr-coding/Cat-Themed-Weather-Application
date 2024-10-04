@@ -1,12 +1,22 @@
 package com.example.weatherapplication.Model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class Weather {
 
+    @SerializedName("latitude")
+
     private Double lati;
+
+    @SerializedName("longitude")
     private Double longi;
+
+    @SerializedName("days")
     private List<Day> dayList;
+
+    @SerializedName("timezone")
     private String timeZone;
 
     public Double getLati() {
