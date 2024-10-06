@@ -1,5 +1,7 @@
 package com.example.weatherapplication.api;
 
+import android.util.Log;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -12,12 +14,16 @@ public class RetrofitInstance {
 
     public static weatherServiceApi getService(){
 
+
+
         if(retrofit == null){
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         };
+
+        Log.e("getService", "getService");
 
         return retrofit.create(weatherServiceApi.class);
 

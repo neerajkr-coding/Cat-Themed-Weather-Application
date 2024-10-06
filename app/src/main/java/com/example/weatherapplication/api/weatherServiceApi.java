@@ -11,4 +11,7 @@ public interface weatherServiceApi {
 
     @GET("timeline/{city}")
     Call<Weather> getWeatherData(@Path("city") String cityName,@Query("key") String apiKey);
+
+//    @GET("timeline/Kolkata")
+//    Call<Weather> getWeatherData(@Query("key") String apiKey);
 }

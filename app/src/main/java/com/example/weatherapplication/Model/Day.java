@@ -20,7 +20,7 @@ public class Day {
 
         @SerializedName("precipprob")
         @Expose
-        private Integer precipprob;
+        private Double precipprob;
 
         public Double getTemp() {
                 return temp;
@@ -46,11 +46,11 @@ public class Day {
                 this.humidity = humidity;
         }
 
-        public Integer getPrecipprob() {
+        public Double getPrecipprob() {
                 return precipprob;
         }
 
-        public void setPrecipprob(Integer precipprob) {
+        public void setPrecipprob(Double precipprob) {
                 this.precipprob = precipprob;
         }
 }

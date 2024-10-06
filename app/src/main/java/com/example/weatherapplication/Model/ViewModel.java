@@ -1,6 +1,7 @@
 package com.example.weatherapplication.Model;
 
 import android.app.Application;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -38,12 +39,20 @@ public class ViewModel extends AndroidViewModel {
 
         weatherServiceApi serviceApi = RetrofitInstance.getService();
 
+        Log.e("IsAPINULL", " "+(serviceApi == null));
+
         Call<Weather> call = serviceApi
                 .getWeatherData(city, application.getApplicationContext().getString(R.string.apiKey));
+
+//        Call<Weather> call = serviceApi
+//                .getWeatherData(application.getApplicationContext().getString(R.string.apiKey));
+
 
         call.enqueue(new Callback<Weather>() {
             @Override
             public void onResponse(Call<Weather> call, Response<Weather> response) {
+
+                Log.v("Day","Yes Called");
 
                 Weather w = response.body();
 
@@ -55,7 +64,7 @@ public class ViewModel extends AndroidViewModel {
 
             @Override
             public void onFailure(Call<Weather> call, Throwable throwable) {
-
+                Log.e("API Error", "onFailure: " + throwable.getMessage());
             }
         });
 
@@ -65,6 +74,7 @@ public class ViewModel extends AndroidViewModel {
     public MutableLiveData<List<Day>> getMutableLiveDataDays(){
 
         if(weather != null && weather.getDayList() != null){
+
             days = weather.getDayList();
             mutableLiveDataDays.setValue(days);
         }
