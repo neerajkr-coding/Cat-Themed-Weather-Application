@@ -1,29 +1,27 @@
-package com.example.weatherapplication.Model;
+package com.example.weatherapplication.models;
 
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Day {
 
+        @SerializedName("datetime")
+        private String date;
+
         @SerializedName("temp")
-        @Expose
         private Double temp;
 
         @SerializedName("feelslike")
-        @Expose
         private Double feelslike;
 
         @SerializedName("humidity")
-        @Expose
         private Double humidity;
 
         @SerializedName("precipprob")
-        @Expose
         private Double precipprob;
 
         public Double getTemp() {
-                return temp;
+                return FtoC(temp);
         }
 
         public void setTemp(Double temp) {
@@ -52,5 +50,18 @@ public class Day {
 
         public void setPrecipprob(Double precipprob) {
                 this.precipprob = precipprob;
+        }
+
+        public String getDate() {
+                return date;
+        }
+
+        public void setDate(String date) {
+                this.date = date;
+        }
+
+        private double FtoC(double f){
+                double res = (f - 32.0) * (5.0 / 9.0);
+                return Math.round(res * 10.0) / 10.0;
         }
 }

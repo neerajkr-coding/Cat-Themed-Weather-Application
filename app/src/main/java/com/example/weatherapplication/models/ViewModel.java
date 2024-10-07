@@ -1,4 +1,4 @@
-package com.example.weatherapplication.Model;
+package com.example.weatherapplication.models;
 
 import android.app.Application;
 import android.util.Log;
@@ -6,6 +6,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 
 import com.example.weatherapplication.R;
 import com.example.weatherapplication.api.weatherServiceApi;
@@ -39,7 +40,7 @@ public class ViewModel extends AndroidViewModel {
 
         weatherServiceApi serviceApi = RetrofitInstance.getService();
 
-        Log.e("IsAPINULL", " "+(serviceApi == null));
+//        Log.e("IsAPINULL", " "+(serviceApi == null));
 
         Call<Weather> call = serviceApi
                 .getWeatherData(city, application.getApplicationContext().getString(R.string.apiKey));
@@ -60,6 +61,8 @@ public class ViewModel extends AndroidViewModel {
                     weather = w;
                     mutableLiveDataWeather.setValue(weather);
                 }
+
+//                Log.e("Days","Method is called, Weather is Null "+ (weather == null));
             }
 
             @Override
@@ -71,13 +74,33 @@ public class ViewModel extends AndroidViewModel {
         return mutableLiveDataWeather;
     }
 
-    public MutableLiveData<List<Day>> getMutableLiveDataDays(){
+    public MutableLiveData<List<Day>> getMutableLiveDataDays(String city){
 
-        if(weather != null && weather.getDayList() != null){
+        Log.e("Days","method called");
 
-            days = weather.getDayList();
-            mutableLiveDataDays.setValue(days);
+        Log.e("Days","Weather is Null 1 "+ (weather == null));
+
+
+        if(weather == null){
+            getMutableLiveDataWeather(city).observeForever(new Observer<Weather>() {
+                @Override
+                public void onChanged(Weather updatedWeather) {
+                    if (updatedWeather != null && updatedWeather.getDayList() != null) {
+                        Log.e("Days","observeForever Weather is Null "+ (weather == null));
+                        weather = updatedWeather; // Update the weather instance
+                        days = weather.getDayList();
+                        mutableLiveDataDays.setValue(days); // Update the LiveData with the new days list
+                    }
+                }
+            });
         }
+
+//        Log.e("Days","Weather is Null 2 "+ (weather == null));
+//
+//        if(weather != null && weather.getDayList() != null){
+//            days = weather.getDayList();
+//            mutableLiveDataDays.setValue(days);
+//        }
         return mutableLiveDataDays;
     }
 }
