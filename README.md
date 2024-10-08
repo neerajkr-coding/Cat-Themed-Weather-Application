@@ -25,8 +25,8 @@ https://github.com/user-attachments/assets/9e49b05e-dbdd-4299-8aaa-34016b392055
   - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - For observing data changes
   - [Data Binding](https://developer.android.com/topic/libraries/data-binding) - For binding UI components to data sources
 
-## Features
-- **Java** is a high-level, object-oriented programming language known for its platform independence, enabling developers to write code once and run it anywhere. It is widely used Android apps, and web development due to its robustness, security, and rich API.
+## Technologies used
+- [**Java**](www.google.com) is a high-level, object-oriented programming language known for its platform independence, enabling developers to write code once and run it anywhere. It is widely used Android apps, and web development due to its robustness, security, and rich API.
 - **MVVM architecture** an architectural pattern that improves the separation of tasks, it allows you to separate the logic of the user interface from the business logic of the app.
 - **View Model** is a class in Android architecture that manages and stores UI-related data in a lifecycle-conscious way. It survives configuration changes like screen rotations, ensuring that data remains consistent and up-to-date without needing to reload or reinitialize.
 - **LiveData** is an observable data holder class in Android that allows UI components to observe changes in data while adhering to the lifecycle of activities and fragments, ensuring updates only happen when the UI is active.
