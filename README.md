@@ -38,15 +38,22 @@ https://github.com/user-attachments/assets/9e49b05e-dbdd-4299-8aaa-34016b392055
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/weather-application.git
+   git clone https://github.com/neerajkr-coding/Weather-Application-using-API
    ```
 2. Open the project in **Android Studio**.
-3. Add your Visual Crossing Weather API key to the project:
+3. Add Dependencies                                                                                                                                                                             ```                                                                                                                                                                   
+  //Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
+
+    //Gson Converter
+    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
+```
+5. Add your Visual Crossing Weather API key to the project:
    - Go to `res/values/strings.xml` and replace `YOUR_API_KEY` with your actual API key:
      ```xml
      <string name="apiKey">YOUR_API_KEY</string>
      ```
-4. Build and run the application on an Android emulator or a real device.
+6. Build and run the application on an Android emulator or a real device.
 
 ## Usage
 1. Open the app, and enter the location name in the input field.
