@@ -26,6 +26,16 @@ This is a Weather Application for Android that provides real-time weather inform
   - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - For observing data changes
   - [Data Binding](https://developer.android.com/topic/libraries/data-binding) - For binding UI components to data sources
 
+## Features
+- **Java** is a high-level, object-oriented programming language known for its platform independence, enabling developers to write code once and run it anywhere. It is widely used Android apps, and web development due to its robustness, security, and rich API.
+- **MVVM architecture** an architectural pattern that improves the separation of tasks, it allows you to separate the logic of the user interface from the business logic of the app.
+- **View Model** is a class in Android architecture that manages and stores UI-related data in a lifecycle-conscious way. It survives configuration changes like screen rotations, ensuring that data remains consistent and up-to-date without needing to reload or reinitialize.
+- **LiveData** is an observable data holder class in Android that allows UI components to observe changes in data while adhering to the lifecycle of activities and fragments, ensuring updates only happen when the UI is active.
+- **View Binding** View Binding is a feature in Android that generates binding classes for XML layouts, allowing you to easily access and interact with views without using findViewById(), reducing boilerplate code and improving type safety.
+- **Retrofit** is a type-safe HTTP client for Android and Java, used to simplify network requests by converting API endpoints into interface methods and handling JSON responses with ease using converters like Gson.
+- **Gson**  is a Java library used for converting Java objects to and from JSON format, making it easier to parse and serialize data from APIs or other sources into usable objects in your application.
+- **RecyclerView** is a flexible and efficient Android widget for displaying large data sets in a scrollable list format, supporting dynamic item layouts and optimized memory usage through view recycling and view holders.
+
 ## Setup Instructions
 1. Clone the repository:
    ```bash
