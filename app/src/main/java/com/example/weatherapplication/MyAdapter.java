@@ -45,7 +45,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        Log.e("MyAdapter", "ArrayList is " + (dayArrayList == null));
         if(dayArrayList == null){
 
             return 0;

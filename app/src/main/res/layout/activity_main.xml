@@ -35,6 +35,8 @@
         android:layout_width="300sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
+        android:hint="Enter location"
+        android:textColorHint="#656565"
         android:textColor="@color/black"
         android:backgroundTint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btn"

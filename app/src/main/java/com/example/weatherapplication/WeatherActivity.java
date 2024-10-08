@@ -54,6 +54,7 @@ public class WeatherActivity extends AppCompatActivity {
 
                 activityWeatherBinding.setWeather(weather);
                 Day d = weather.getDayList().get(0);
+                d.getDate();
                 activityWeatherBinding.setDay(d);
 
                 adapter.setDayArrayList(weather.getDayList());

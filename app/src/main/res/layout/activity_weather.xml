@@ -40,7 +40,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@{day.humidity.toString()}"
+        android:text='@{"Humidity: " + day.humidity.toString()}'
         android:textSize="23sp"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -54,7 +54,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@{day.precipprob.toString()}"
+        android:text='@{"Can it rain? "+day.precipprob.toString()+"%"}'
         android:textSize="23sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -81,7 +81,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@{day.temp.toString()}"
+        android:text='@{"Temprature "+day.temp.toString()+"°C"}'
         android:textSize="23sp"
         android:textColor="@color/black"
         android:textStyle="bold"

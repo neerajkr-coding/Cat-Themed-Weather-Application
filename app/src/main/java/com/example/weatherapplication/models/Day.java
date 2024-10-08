@@ -1,6 +1,8 @@
 package com.example.weatherapplication.models;
 
 
+import android.util.Log;
+
 import com.google.gson.annotations.SerializedName;
 
 public class Day {
@@ -53,7 +55,10 @@ public class Day {
         }
 
         public String getDate() {
-                return date;
+//                2024-10-08
+
+                String modifiedDate = date.replace("-", "/");
+                return modifiedDate;
         }
 
         public void setDate(String date) {
