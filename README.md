@@ -26,9 +26,9 @@ https://github.com/user-attachments/assets/9e49b05e-dbdd-4299-8aaa-34016b392055
   - [Data Binding](https://developer.android.com/topic/libraries/data-binding) - For binding UI components to data sources
 
 ## Technologies used
-- [**Java**](www.google.com) is a high-level, object-oriented programming language known for its platform independence, enabling developers to write code once and run it anywhere. It is widely used Android apps, and web development due to its robustness, security, and rich API.
+- **Java** is a high-level, object-oriented programming language known for its platform independence, enabling developers to write code once and run it anywhere. 
 - **MVVM architecture** an architectural pattern that improves the separation of tasks, it allows you to separate the logic of the user interface from the business logic of the app.
-- **View Model** is a class in Android architecture that manages and stores UI-related data in a lifecycle-conscious way. It survives configuration changes like screen rotations, ensuring that data remains consistent and up-to-date without needing to reload or reinitialize.
+- **View Model** class in Android architecture manages and stores UI-related data in a lifecycle-conscious way. It survives configuration changes and ensuring that data remains consistent and up-to-date without needing to reload or reinitialize.
 - **LiveData** is an observable data holder class in Android that allows UI components to observe changes in data while adhering to the lifecycle of activities and fragments, ensuring updates only happen when the UI is active.
 - **View Binding** View Binding is a feature in Android that generates binding classes for XML layouts, allowing you to easily access and interact with views without using findViewById(), reducing boilerplate code and improving type safety.
 - **Retrofit** is a type-safe HTTP client for Android and Java, used to simplify network requests by converting API endpoints into interface methods and handling JSON responses with ease using converters like Gson.
