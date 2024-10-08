@@ -41,13 +41,12 @@ https://github.com/user-attachments/assets/9e49b05e-dbdd-4299-8aaa-34016b392055
    git clone https://github.com/neerajkr-coding/Weather-Application-using-API
    ```
 2. Open the project in **Android Studio**.
-3. Add Dependencies                                                                                                                                                                             ```                                                                                                                                                                   
+3. Add Dependencies```                                                                                                                                                                   
   //Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.11.0")
 
     //Gson Converter
-    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
-```
+    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")```
 5. Add your Visual Crossing Weather API key to the project:
    - Go to `res/values/strings.xml` and replace `YOUR_API_KEY` with your actual API key:
      ```xml
