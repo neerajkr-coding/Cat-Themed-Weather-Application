@@ -1,5 +1,4 @@
 
-https://github.com/user-attachments/assets/9e49b05e-dbdd-4299-8aaa-34016b392055
 # Weather Application for Android
 
 This is a Weather Application for Android that provides real-time weather information using the Visual Crossing Weather API. The application displays the current temperature, feels-like temperature, humidity, and a 15-day forecast. It is built using modern Android development practices, including MVVM architecture, data binding, LiveData, Retrofit, and Gson.
@@ -13,7 +12,7 @@ This is a Weather Application for Android that provides real-time weather inform
 - **Retrofit & Gson Converter**: For handling API calls and converting JSON data into Java objects seamlessly.
 
 ## Video
-[(Add screenshots of your app here to give users a visual overview.)](https://github.com/user-attachments/assets/9e49b05e-dbdd-4299-8aaa-34016b392055)
+https://github.com/user-attachments/assets/9e49b05e-dbdd-4299-8aaa-34016b392055
 
 ## Tech Stack
 - **Language**: Java
