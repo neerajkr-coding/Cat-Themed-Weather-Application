@@ -1,10 +1,11 @@
 
-# Weather Application for Android
+# Pawcast: A Cat-Themed Weather Application for Android
 
-This is a Weather Application for Android that provides real-time weather information using the Visual Crossing Weather API. The application displays the current temperature, feels-like temperature, humidity, and a 15-day forecast. It is built using modern Android development practices, including MVVM architecture, data binding, LiveData, Retrofit, and Gson.
+Pawcast is a delightful weather application for Android that provides real-time weather information using the Visual Crossing Weather API. Designed with a soothing cat theme, the application not only displays the current weather but also enhances the user experience with visually appealing backgrounds and icons that change according to the weather conditions.
 
 ## Features
 - **Current Weather Information**: Displays the current temperature, feels-like temperature, and humidity based on the user’s location input.
+- **Dynamic Theme**: The application features a cat theme that changes the background image and weather icons based on the current weather, creating a relaxing vibe.
 - **15-Day Forecast**: Shows a 15-day weather forecast using a RecyclerView for a clean and scrollable display.
 - **Search by Location**: Users can input the name of the location to get detailed weather information.
 - **MVVM Architecture**: Follows the Model-View-ViewModel pattern to separate concerns and ensure a modular, maintainable codebase.
@@ -12,7 +13,11 @@ This is a Weather Application for Android that provides real-time weather inform
 - **Retrofit & Gson Converter**: For handling API calls and converting JSON data into Java objects seamlessly.
 
 ## Video
-https://github.com/user-attachments/assets/9e49b05e-dbdd-4299-8aaa-34016b392055
+
+![Slide 16_9 - 1](https://github.com/user-attachments/assets/cd303a5b-ed96-4fa2-9e07-97460eaabe9e)
+
+https://github.com/user-attachments/assets/5f88da8d-11ca-4c8e-86ec-c34cd359eddc
+
 
 ## Tech Stack
 - **Language**: Java
@@ -88,3 +93,5 @@ https://github.com/user-attachments/assets/9e49b05e-dbdd-4299-8aaa-34016b392055
 
 ## Contact
 For any questions or support, please contact [kr.neeraj105@gmail.com].
+
+[Inspiration](https://www.behance.net/gallery/207981775/PawCast-Cat-Themed-Weather-App)
