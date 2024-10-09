@@ -13,17 +13,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#98DFFF"
+    android:background="@drawable/mainbg"
+    android:fitsSystemWindows="true"
+
     >
 
 
     <Button
         android:id="@+id/btn"
-        android:backgroundTint="#13588F"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="384dp"
-        android:text="Get"
+        android:layout_marginBottom="88dp"
+        android:backgroundTint="#0B1225"
+        android:text="Enter"
+        android:fontFamily="@font/nunito_medium"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,31 +38,32 @@
         android:layout_width="300sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
+        android:backgroundTint="#0B1225"
         android:hint="Enter location"
+        android:textColor="#C3FFFFFF"
         android:textColorHint="#656565"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.433" />
+        app:layout_constraintVertical_bias="0.844" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Weather Report"
-        android:textColor="@color/black"
-        android:textSize="45sp"
+        android:text="Pawcast"
+        android:textColor="#EDEDED"
+        android:fontFamily="@font/nunito_medium"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.175" />
+        app:layout_constraintVertical_bias="0.339" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

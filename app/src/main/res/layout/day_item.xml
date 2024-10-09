@@ -2,7 +2,9 @@
 
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
 
     <data>
         <variable
@@ -10,122 +12,59 @@
             type="com.example.weatherapplication.models.Day" />
     </data>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="115sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:cardCornerRadius="20sp"
-        android:layout_margin="3sp"
-        >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:background="@color/white"
-            >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="7sp"
+        android:layout_marginLeft="30sp"
+        android:background="#00000000">
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25sp"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="15sp"
+            android:text='@{day.currDay}'
+            android:textColor="#C3FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent" />
 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60sp"
+            android:layout_toRightOf="@id/imageView"
+            android:text='@{day.minTemp.toString()}'
+            android:textColor="#C3FFFFFF"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="29sp"
-                android:layout_height="29sp"
-                android:src="@drawable/temp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textView2"
-                app:layout_constraintHorizontal_bias="0.769"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.067" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="29sp"
+            android:layout_height="29sp"
+            android:layout_marginStart="120sp"
+            android:layout_marginBottom="12dp"
+            setImg="@{day}"
+            app:tint="#C3FFFFFF" />
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55sp"
+            android:layout_toRightOf="@id/textView1"
+            android:text='@{day.maxTemp.toString()}'
+            android:textColor="#C3FFFFFF"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </RelativeLayout>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text='@{"Humidity: " + day.humidity.toString()}'
-                android:textSize="19sp"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@id/textView2"
-                app:layout_constraintVertical_bias="0.117" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text='@{"Can it rain? "+day.precipprob.toString()+"%"}'
-                android:textSize="19sp"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@id/textView2"
-                app:layout_constraintVertical_bias="0.585" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="29sp"
-                android:layout_height="29sp"
-                android:src="@drawable/rain"
-                android:layout_marginTop="5sp"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textView2"
-                app:layout_constraintHorizontal_bias="0.76"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text='@{"Temprature "+day.temp.toString()+"°C"}'
-                android:textSize="19sp"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.195"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.096" />
-
-            <TextView
-                android:id="@+id/Date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text='@{day.date}'
-                android:textColor="#1A6AAA"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.786"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.096" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="29sp"
-                android:layout_height="29sp"
-                android:layout_marginTop="5sp"
-                android:src="@drawable/humidity"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textView2"
-                app:layout_constraintHorizontal_bias="0.76"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3"
-                app:layout_constraintVertical_bias="0.0" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
 
 </layout>
