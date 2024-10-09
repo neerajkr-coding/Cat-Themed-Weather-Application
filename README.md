@@ -72,8 +72,8 @@ https://github.com/user-attachments/assets/5f88da8d-11ca-4c8e-86ec-c34cd359eddc
 ## Future Enhancements
 - Add support for user location detection via GPS.
 - Improve the UI to make it more visually pleasing and functional, providing a better user experience.
-- Add different themes based on weather conditions (e.g., rainy, sunny).
-- Include more weather details like wind speed, UV index, and precipitation levels.
+- Show 24hr weather forecast.
+- Show different component in weather forecast
 
 ## Contributing
 1. Fork the repository.
