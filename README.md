@@ -14,7 +14,7 @@ Pawcast is a delightful weather application for Android that provides real-time 
 
 ## Video
 
-![Group 1.png](https://github.com/user-attachments/assets/379d33c8-2760-485e-83e5-7ac1aab13f07)
+![Slide 16_9 - 1.png](https://github.com/user-attachments/assets/449828e8-e35e-4540-bb0d-948f7f1d6a7c)
 
 https://github.com/user-attachments/assets/5f88da8d-11ca-4c8e-86ec-c34cd359eddc
 
